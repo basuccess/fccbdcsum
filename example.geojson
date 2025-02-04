@@ -1,0 +1,68 @@
+{           
+  "type": "FeatureCollection",
+  "features": [
+    {
+        "id": "19898",
+        "type": "Feature",
+        "properties": {
+            "STATEFP20": "01",
+            "COUNTYFP20": "071",
+            "TRACTCE20": "950800",
+            "BLOCKCE20": "4043",
+            "GEOID20": "010719508004043",
+            "GEOIDFQ20": "1000000US010719508004043",
+            "NAME20": "Block4043",
+            "MTFCC20": "G5040",
+            "UR20": "U",
+            "UACE20": "80092",
+            "FUNCSTAT20": "S",
+            "ALAND20": 20697,
+            "AWATER20": 0,
+            "INTPTLAT20": "+34.6622956",
+            "INTPTLON20": "-086.0374197",
+            "HOUSING20": 15,
+            "POP20": 28,
+            "Copper": { "holding_company": [ "AT&T Inc.","Lumen Technologies, Inc." ], "locations": [10,2], "provider_id": [130077,130228], "brand_name": ["AT&T","Century Link"], "technology": 10, "technology_description": "Copper", "max_advertised_download_speed": [100,100], "max_advertised_upload_speed": [6,20], "low_latency": [1,5], "business_residential_code": ["X","R"] },
+            "Cable": { "holding_company": [ "Charter Communications" ], "locations": [15], "provider_id": [130235]], "brand_name": ["Spectrum"], "technology": 40, "technology_description": "Cable", "max_advertised_download_speed": [1000], "max_advertised_upload_speed": [35], "low_latency": [1], "business_dresidential_code": ["R"] },
+            "Fiber": { "holding_company": [ "AT&T Inc." ], "locations": [5], "provider_id": [130077], "brand_name": ["AT&T"], "technology": 50, "technology_description": "Fiber", "max_advertised_download_speed": [1000], "max_advertised_upload_speed": [500], "low_latency": [1], "business_residential_code": ["X"] },
+            "GeoSat": {},
+            "NGeoSt": {},
+            "UnlFWA": {},
+            "LicFWA": {},
+            "LBRFWA": {},
+            "Other": {},
+            "3G": {},
+            "4GLTE": {},
+            "5GNR": {}
+
+
+
+
+
+
+
+
+
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-86.038028, 34.662141],
+                    [-86.038012, 34.662496],
+                    [-86.038025, 34.66313],
+                    [-86.037667, 34.663145],
+                    [-86.037234, 34.663128],
+                    [-86.036802, 34.663126],
+                    [-86.036802, 34.662677],
+                    [-86.036813, 34.66232],
+                    [-86.036814, 34.661964],
+                    [-86.036834, 34.661458],
+                    [-86.03714, 34.661453],
+                    [-86.037571, 34.661455],
+                    [-86.038047, 34.661468],
+                    [-86.038028, 34.662141]
+                ]
+            ]
+        }
+    }
+}

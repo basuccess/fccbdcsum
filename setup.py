@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='catfccbdc',
+    name='fccbdcsum',
     version='0.1.0',
     author='Tony Houweling',
     author_email='tony.houweling@gmail.com',
@@ -19,7 +19,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'catfccbdc=main:main',
+            'fccbdcsum=main:main',
         ],
     },
     classifiers=[

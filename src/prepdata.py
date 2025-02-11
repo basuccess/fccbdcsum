@@ -2,6 +2,7 @@
 
 import os
 import re
+import logging
 import pandas as pd
 from constant import STATES_AND_TERRITORIES, BDC_US_PROVIDER_FILE_PATTERN
 
@@ -11,6 +12,7 @@ def prepare_lookup_tables():
     return state_dict
 
 def load_holder_mapping(base_dir):
+    logging.info(f"Preparing holder mapping data.")
     resources_dir = os.path.join(base_dir, 'USA_FCC-bdc', 'resources')
     if not os.path.exists(resources_dir):
         raise FileNotFoundError(f"Resources directory not found: {resources_dir}")
@@ -32,16 +34,14 @@ def load_holder_mapping(base_dir):
     return holder_mapping
 
 def prepare_dataframes():
-    # Prepare dataframes for storing FCC-BDC and Census features
+    # Prepare dataframe for storing FCC-BDC features
     fcc_bdc_df = pd.DataFrame()
-    census_df = pd.DataFrame()
-    return fcc_bdc_df, census_df
+    return fcc_bdc_df
 
 def check_directory_structure(base_dir):
     # Check if the required directory structure exists
     required_dirs = [
         os.path.join(base_dir, 'USA_FCC-bdc'),
-        os.path.join(base_dir, 'USA_Census'),
         os.path.join(base_dir, 'USA_FCC-bdc', 'resources')
     ]
 
@@ -50,9 +50,10 @@ def check_directory_structure(base_dir):
             raise FileNotFoundError(f"Required directory does not exist: {directory}")
 
 def prepare_data(base_dir, state):
+    logging.info(f"Preparing data for state: {state}")
     # Function to prepare data
     check_directory_structure(base_dir)
     lookup_tables = prepare_lookup_tables()
-    fcc_bdc_df, census_df = prepare_dataframes()
+    fcc_bdc_df = prepare_dataframes()
     # Additional data preparation logic can be added here
-    return fcc_bdc_df, census_df
+    return fcc_bdc_df

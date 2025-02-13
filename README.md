@@ -24,10 +24,11 @@ python src/main.py -d /path/to/base/dir -s FL IL -o /path/to/output/dir
 
 ## Options
 
-- `-d` or `--base-dir`: Specify the base directory (default is the current working directory).
-- `-s` or `--state`: Specify a state abbreviation or a list of state abbreviations to process (default is to process all states).
-- `-h` or `--help`: Print help/usage information and exit.
-- `-v` or `--version`: Print the version of the project and exit.## Project Structure
+- '-d', '--base-dir', type=str, default=os.getcwd(), help='Base directory for data files'
+- '-s', '--state', type=str, nargs='*', default=[state[1] for state in STATES_AND_TERRITORIES], help='State abbreviation(s) to process'
+- '--log-file', type=str, nargs='?', const='fccbdcsum_log.log', help='Log file path'
+- '-o', '--output-dir', type=str, help='Output directory for data files'
+- '-v', '--version', action='version', version='%(prog)s 1.0', help='Print version and exit'
 
 ```
 fccbdcsum
@@ -35,12 +36,9 @@ fccbdcsum
 │   ├── constant.py        # Contains constants for the project
 │   ├── prepdata.py        # Functions to prepare data for processing
 │   ├── readin.py          # Functions to read input data files
-│   ├── merge.py           # Functions to merge data based on geographic identifiers
 │   ├── writeout.py        # Functions to write output to geopackage
 │   └── main.py            # Main entry point for the project
 data
-│   ├── USA_Census         # Directory for tabblock20 shapefiles
-│       └── resources      # Directory for required resource files
 │   └── USA_FCC-bdc
 │       └── resources      # Directory for required resource files
 ├── requirements.txt       # Lists project dependencies
